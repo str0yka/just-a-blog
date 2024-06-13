@@ -1,0 +1,77 @@
+.title {
+  &.h1 {
+    line-height: 36px;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &.h2 {
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &.h3 {
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
+.button {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.default {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.semibold {
+  font-weight: 500;
+}
+
+.paragraph16 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.regular {
+  font-weight: 400;
+}
+
+.medium {
+  font-weight: 500;
+}
+
+.underline {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.paragraph14 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.paragraph12 {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.invert {
+  color: var(--color-text-invert);
+}
+
+.primary {
+  color: var(--color-text-primary);
+}
+
+.secondary {
+  color: var(--color-text-secondary);
+}
+
+.error {
+  color: var(--color-text-error);
+}
