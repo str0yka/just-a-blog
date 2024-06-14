@@ -5,12 +5,15 @@ import { zodResolver } from '@hookform/resolvers/zod';
 
 import { Button, Input, PasswordInput, Typography } from '~/components/ui';
 import { postLogin } from '~/utils/api';
+import { useUserStore } from '~/utils/store';
 
 import { loginFormScheme } from './_constants';
 
 import s from './page.module.scss';
 
 export const AuthPage = () => {
+  const userStore = useUserStore();
+
   const loginForm = useForm({
     defaultValues: { password: '', username: '' },
     resolver: zodResolver(loginFormScheme),
@@ -22,7 +25,7 @@ export const AuthPage = () => {
         className={s['form-container']}
         onSubmit={loginForm.handleSubmit(async (values) => {
           const postLoginResponse = await postLogin({ params: values });
-          console.log('@', postLoginResponse);
+          userStore.dispatch('set', postLoginResponse.data.user);
         })}
       >
         <Typography
@@ -45,7 +48,7 @@ export const AuthPage = () => {
         />
         <Button
           type="submit"
-          disabled={loginForm.formState.isSubmitting}
+          disabled={loginForm.formState.isSubmitting || loginForm.formState.isSubmitSuccessful}
         >
           Войти
         </Button>

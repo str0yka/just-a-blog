@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 
 import { inter } from '~/static/fonts';
 
+import { RootProvider } from './provider';
+
 import '~/static/styles/reset.scss';
 import '~/static/styles/colors.scss';
 
@@ -16,9 +18,11 @@ interface RootLayoutProps {
 
 export const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
+    <RootProvider>
+      <html lang="en">
+        <body className={inter.className}>{children}</body>
+      </html>
+    </RootProvider>
   );
 };
 
