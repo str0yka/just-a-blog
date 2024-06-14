@@ -5,7 +5,7 @@ import clsx from 'clsx';
 
 import { usePagination } from './hooks';
 
-import s from './Pagination.module.css';
+import s from './Pagination.module.scss';
 
 export interface PaginationProps extends React.ComponentProps<'nav'> {
   currentPage: number;

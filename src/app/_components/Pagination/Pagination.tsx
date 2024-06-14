@@ -7,12 +7,10 @@ import type { PaginationProps as UIPaginationProps } from '~/components/ui';
 import { Pagination as UIPaggination } from '~/components/ui';
 import { SEARCH_PARAMS } from '~/utils/constants';
 
-interface PagginationProps extends Omit<UIPaginationProps, 'onPageChange'> {
-  defaultPage?: number;
-}
+type PagginationProps = Omit<UIPaginationProps, 'onPageChange'>;
 
 export const Pagination = forwardRef<React.ComponentRef<typeof UIPaggination>, PagginationProps>(
-  ({ currentPage, totalPages, defaultPage, ...props }, ref) => {
+  ({ currentPage, totalPages, ...props }, ref) => {
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
