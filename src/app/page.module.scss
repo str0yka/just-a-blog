@@ -1,14 +1,23 @@
 .container {
   width: calc(100% - 32px);
-  padding-top: 16px;
-  padding-bottom: 16px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.paggination-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.list {
   gap: 16px;
 }
 
 @media (width < 960px) {
-  .container {
+  .list {
     display: flex;
     flex-direction: column;
   }
@@ -17,6 +26,9 @@
 @media (width >= 960px) {
   .container {
     width: 960px;
+  }
+
+  .list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;

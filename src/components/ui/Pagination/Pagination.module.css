@@ -1,0 +1,24 @@
+.list {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.list-item {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-button {
+  border-radius: 4px;
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
+
+  &.active {
+    background-color: var(--color-neutral2-800);
+    color: var(--color-text-invert);
+  }
+}

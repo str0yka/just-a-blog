@@ -20,6 +20,7 @@ export const Post: React.FC<PostProps> = ({ body, title }) => (
       component="p"
       variant="paragraph16.regular"
       color="secondary"
+      className={s.body}
     >
       {body}
     </Typography>
