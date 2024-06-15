@@ -8,11 +8,11 @@ import { ROUTES } from '~/utils/constants';
 
 import s from './page.module.scss';
 
-interface PostPageProps {
+interface PostIdPageProps {
   params: { postId: string };
 }
 
-export const PostPage: React.FC<PostPageProps> = async ({ params }) => {
+export const PostIdPage: React.FC<PostIdPageProps> = async ({ params }) => {
   const postId = Number(params.postId);
   const getPostsIdResponse = await getPostsId({ params: { id: postId } });
 
@@ -51,4 +51,4 @@ export const PostPage: React.FC<PostPageProps> = async ({ params }) => {
   );
 };
 
-export default PostPage;
+export default PostIdPage;
