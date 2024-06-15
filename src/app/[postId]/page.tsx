@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import type { Metadata } from 'next';
 import { redirect } from 'next/navigation';
 
 import { Comment, Post } from '~/components';
@@ -11,6 +12,25 @@ import s from './page.module.scss';
 interface PostIdPageProps {
   params: { postId: string };
 }
+
+export const generateMetadata = async ({ params }: PostIdPageProps): Promise<Metadata> => {
+  try {
+    const postId = Number(params.postId);
+    const getPostsIdResponse = await getPostsId({ params: { id: postId } });
+
+    return {
+      title: `${getPostsIdResponse.data.title} | Просто блог`,
+      openGraph: {
+        title: `${getPostsIdResponse.data.title} | Просто блог`,
+        description: getPostsIdResponse.data.body,
+      },
+    };
+  } catch {
+    return {
+      title: 'Просто блог',
+    };
+  }
+};
 
 const PostIdPage: React.FC<PostIdPageProps> = async ({ params }) => {
   const postId = Number(params.postId);

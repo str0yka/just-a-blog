@@ -10,8 +10,8 @@ import '~/static/styles/colors.scss';
 import '~/static/styles/global.scss';
 
 export const metadata: Metadata = {
-  title: 'Just a blog',
-  description: 'A platform for blogs and discussions: share and comment!',
+  title: 'Просто блог',
+  description: 'Платформа для блогов и обсуждений: делитесь и комментируйте!',
 };
 
 interface RootLayoutProps {

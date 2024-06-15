@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 
@@ -17,6 +18,14 @@ interface HomePageProps {
 
 const MAX_POST_COUNT = 20;
 const DEFAULT_PAGE = 1;
+
+export const generateMetadata = ({ searchParams }: HomePageProps): Metadata => {
+  const page = Math.floor(Number(searchParams?.[SEARCH_PARAMS.PAGE])) || DEFAULT_PAGE;
+
+  return {
+    title: `Страница ${page} | Просто блог`,
+  };
+};
 
 const HomePage: React.FC<HomePageProps> = async ({ searchParams }) => {
   const getPostsResponse = await getPosts();
