@@ -17,7 +17,7 @@ $ yarn
 Создать `.env` файл в корне и добавить две переменные
 
 ```
-NEXT_PUBLIC_CLIENT_API=http://localhost:3000
+NEXT_PUBLIC_CLIENT_URL=http://localhost:3000/api
 NEXT_PUBLIC_API_URL=https://jsonplaceholder.typicode.com
 ```
 
