@@ -84,6 +84,9 @@
         "plugin:prettier/recommended"
       ],
       "rules": {
+        "no-nested-ternary": "off",
+        "promise/catch-or-return": "off",
+        "promise/always-return": "off",
         "@typescript-eslint/no-misused-promises": "off",
         "import/order": "off",
         "import/extensions": "off",

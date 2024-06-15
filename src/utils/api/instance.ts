@@ -28,7 +28,7 @@ export class HttpClient {
       success: response.ok,
       status: response.status,
       statusText: response.statusText,
-      data: (await response.json()) as T,
+      data: (response.json ? await response.json() : null) as T,
     };
   }
 

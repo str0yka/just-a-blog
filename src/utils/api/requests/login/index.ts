@@ -1,4 +1,4 @@
-import { mockApi } from '../../instance';
+import { mockApi } from '~/utils/api/instance';
 
 export interface PostLoginParams {
   username: string;

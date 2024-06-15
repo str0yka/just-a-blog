@@ -2,18 +2,27 @@
   width: calc(100% - 32px);
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .paggination-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 16px;
-  padding-bottom: 16px;
 }
 
 .list {
   gap: 16px;
+}
+
+.list-item {
+  padding: 16px;
+  border: 1px var(--color-border-light) solid;
+  border-radius: 8px;
 }
 
 @media (width < 960px) {

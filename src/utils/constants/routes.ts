@@ -1,4 +1,6 @@
 export const ROUTES = {
   HOME: '/',
-  POST: (postId: number) => `/${postId}`,
+  AUTH: '/auth',
+  LOGOUT: '/logout',
+  POSTS: (postId: number) => `/${postId}`,
 };

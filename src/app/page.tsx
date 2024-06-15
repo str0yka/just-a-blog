@@ -31,16 +31,17 @@ export const HomePage: React.FC<HomePageProps> = async ({ searchParams }) => {
 
   return (
     <main className={s.container}>
-      <h1>Page is {page}</h1>
       <section className={s.list}>
         {posts.map((post) => (
           <Link
             key={post.id}
-            href={ROUTES.POST(post.id)}
+            href={ROUTES.POSTS(post.id)}
+            className={s['list-item']}
           >
             <Post
               body={post.body}
               title={post.title}
+              truncateBody
             />
           </Link>
         ))}
