@@ -18,7 +18,7 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
-export const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <RootProvider>
       <html lang="en">

@@ -18,7 +18,7 @@ interface HomePageProps {
 const MAX_POST_COUNT = 20;
 const DEFAULT_PAGE = 1;
 
-export const HomePage: React.FC<HomePageProps> = async ({ searchParams }) => {
+const HomePage: React.FC<HomePageProps> = async ({ searchParams }) => {
   const getPostsResponse = await getPosts();
 
   const page = Math.floor(Number(searchParams?.[SEARCH_PARAMS.PAGE])) || DEFAULT_PAGE;

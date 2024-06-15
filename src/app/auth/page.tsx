@@ -11,7 +11,7 @@ import { loginFormScheme } from './_constants';
 
 import s from './page.module.scss';
 
-export const AuthPage = () => {
+const AuthPage = () => {
   const userStore = useUserStore();
 
   const loginForm = useForm({

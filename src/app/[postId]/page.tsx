@@ -12,7 +12,7 @@ interface PostIdPageProps {
   params: { postId: string };
 }
 
-export const PostIdPage: React.FC<PostIdPageProps> = async ({ params }) => {
+const PostIdPage: React.FC<PostIdPageProps> = async ({ params }) => {
   const postId = Number(params.postId);
   const getPostsIdResponse = await getPostsId({ params: { id: postId } });
 

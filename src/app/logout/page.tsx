@@ -7,7 +7,7 @@ import { useUserStore } from '~/utils/store';
 
 import s from './page.module.scss';
 
-export const LogoutPage = () => {
+const LogoutPage = () => {
   const userStore = useUserStore();
   const postLogoutQuery = useQuery(postLogout, {
     onSuccess: () => {

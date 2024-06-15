@@ -4,7 +4,7 @@ interface LogoutPageLayoutProps {
   children: React.ReactNode;
 }
 
-export const LogoutPageLayout: React.FC<LogoutPageLayoutProps> = ({ children }) => (
+const LogoutPageLayout: React.FC<LogoutPageLayoutProps> = ({ children }) => (
   <LogoutPageProvider>{children}</LogoutPageProvider>
 );
 
